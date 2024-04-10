@@ -1,0 +1,264 @@
+/* HEADER */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    
+    --text-color: #000000;
+
+    --main-color: rgb(0, 255, 89);
+
+    --font-color: rgb(120, 120, 120);
+
+    --h1-font: 4rem;
+    --h2-font: 3rem;
+    --p-font: 1.2rem;
+
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    padding: 40px 19%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    transition: all .7s;
+}
+
+header ul li{
+    list-style: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--bg-color);
+    font-size: 36px;
+    font-weight: 600;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.signin{
+    height: 5.7vh;
+    width: 126px;
+    font-size: var(--p-font);
+    background-color: rgb(255, 255, 255);
+    color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.navbar a {
+    color: var(--bg-color);
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .7s;
+}
+
+#menu-icon {
+    font-size: 34px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+    color: var(--bg-color);
+}
+
+/* HEADER */
+
+
+
+
+
+.pro-page{
+    width: 100%;
+    min-height: 80vh;
+    padding: 6% 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pro-img1{
+    height: 310px;
+    width: 310px;
+}
+
+.pro-name{
+    font-size: 31px;
+}
+
+.pro-descrip{
+    font-size: 18px;
+}
+
+.pro-add{
+    height: 5.6vh;
+    width: 124px;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.pro{
+    width: 370px;
+    height: 510px;
+    border-bottom: 2px solid var(--font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.pro-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    text-align: center;
+    padding: 30px;
+    background: var(--text-color);
+}
+.foot-word{
+    color: #ffffff;
+    font-size: var(--p-font);
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1650px) {
+    header {
+        padding: 14px 8%;
+    }
+
+    header.sticky {
+        padding: 9px 8%;
+    }
+}
+
+@media (max-width: 1220px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    header.sticky {
+        padding: 9px 4%;
+    }
+}
+
+
+@media (max-width: 770px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        padding: 20px 30px;
+        gap: 0.6rem;
+        align-items: flex-start;
+        transition: all .7s;
+    }
+    
+    .navbar a {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--main-color);
+    }
+
+    .signin{
+        height: 5.7vh;
+        width: 126px;
+        font-size: var(--p-font);
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        border: none;
+        border-radius: 4px;
+        font-weight: 700;
+    }
+
+    .navbar.open {
+        right: 0;
+    }
+
+    .footer{
+        text-align: center;
+        padding: 26px;
+        background: var(--text-color);
+    }
+    .foot-word{
+        color: #ffffff;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .pro-page{
+        padding: 10% 0;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
